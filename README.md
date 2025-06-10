@@ -72,26 +72,8 @@
    ```bash
    git clone https://github.com/Lincoln-Madaraka/MwangazaFarm254.git
    cd MwangazaFarm254
-Install dependencies (if any, for example if you use a bundler or dev server):
-
-bash
-Copy
-Edit
-npm install
-Configure Firebase:
-
-Create a project on Firebase Console
-
-Enable Email/Password Authentication and Firestore
-
-Copy your Firebase config object and paste it into firebase-config.js
-
-Run the development server (if applicable):
-
-bash
-Copy
-Edit
-npm start
+2. Install dependencies
+3. Run the development server;
 Open the app in your browser at http://localhost:3000 or open index.html directly if no server is used.
 
 🌍 Deployment
@@ -100,19 +82,15 @@ Access the live demo here:
 https://your-vercel-link.vercel.app (Replace with your actual URL)
 
 📂 Project Structure
-php
-Copy
-Edit
 MwangazaFarm254/
 ├── public/
 │   └── mwangazafarm.png         # App screenshot and static assets
 ├── index.html                   # Main app page
-├── styles.css                   # Styling and theming
-├── script.js                    # Main JavaScript (AI listing, Firebase, UI)
-├── firebase-config.js           # Firebase config and initialization
-└── assets/                      # Additional images/icons
+├── styles.css     
+└── script.js
 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check issues page or submit a pull request.
 
 👨‍💻 Author
 Lincoln Madaraka
+[![GitHub](https://img.shields.io/badge/-@Lincoln--Madaraka-181717?logo=github)](https://github.com/Lincoln-Madaraka)
