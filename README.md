@@ -77,7 +77,7 @@ Open the app in your browser at http://localhost:3000 or open index.html directl
 🌍 Deployment
 MwangazaFarm254 is deployed on Vercel for blazing-fast, scalable hosting.
 Access the live demo here:
-https://your-vercel-link.vercel.app (Replace with your actual URL)
+https://mwangazafarm254.vercel.app/
 
 📂 Project Structure
 MwangazaFarm254/
