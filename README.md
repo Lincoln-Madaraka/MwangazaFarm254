@@ -7,7 +7,7 @@
 
 **MwangazaFarm** is a dynamic web platform that connects local Kenyan farmers with urban consumers by leveraging AI-generated produce listings. This platform empowers farmers to showcase fresh, high-quality produce online through smart, appealing descriptions — effectively bridging the rural-urban market gap.
 
-![MwangazaFarm Screenshot](public/mwangazafarm.png)
+![MwangazaFarm Screenshot](/mwangazafarm.png)
 
 ---
 
