@@ -1,0 +1,27 @@
+Design a full-page website layout for “MwangazaFarm” – an AI-powered produce marketplace connecting Kenyan farmers with urban consumers. Use an organic, eco-friendly aesthetic with green tones, light beige, and white backgrounds. Structure the layout in this sequence:
+Hero section – bold tagline “AI-powered produce marketplace bridging Kenyan farms and cities,” with a clean background image of Kenyan farmland and urban connection.
+About section – explain the mission of empowering farmers through tech.
+Features – highlight smart AI listings, farmer-to-consumer connections, and eco-trade.
+Marketplace preview – grid of produce listings with images, names, and prices.
+Listing Form – inputs for produce name, quantity (kg), location, category, price, and “Generate Smart Listing” button.
+Listing Result – visually styled listing with AI-generated description.
+Testimonials – quotes from Kenyan farmers and city consumers.
+Contact section – simple contact form and location.
+Footer – include tagline “MwangazaFarm – Harvest the Future.”
+
+Use a clean, mobile-responsive UI and ensure it reflects a modern, tech-for-agriculture feel
+Build using HTML, CSS, and vanilla JavaScript (no frameworks). Make sure it's easy to connect to a backend API later via JavaScript fetch().
+
+Generate JavaScript code that toggles a mobile hamburger menu. When the hamburger icon is clicked, it toggles an 'active' class on both the icon and the navigation menu. When any navigation link is clicked, the menu closes by removing the 'active' classes. Also, implement smooth scrolling behavior for all anchor links that navigate to page sections, with an offset to accommodate a fixed header."
+Write JavaScript code that listens for a form submission event, prevents default behavior, retrieves input values (produce, quantity, location), validates them, and dynamically displays a listing below the form. The listing includes a title (produce name capitalized), quantity, location, and a descriptive paragraph based on the produce type. Implement a function that returns tailored descriptions for specific produce types (like tomatoes, maize, potatoes, etc.) and a default description for others.
+Create a reusable JavaScript notification system that shows messages at the bottom-right corner. Notifications fade in/out smoothly, have different styles based on type (success, error, info), and automatically disappear after 3 seconds.
+Generate JavaScript code that initializes Firebase using a given configuration. Implement functionality to save listing data (title, description, quantity, location, timestamp) from the form/listing into Firestore when a 'Save' button is clicked. The system should show success notifications upon save and error notifications if saving fails.
+Combine mobile menu toggle, smooth scrolling, form submission with dynamic listing and tailored descriptions, notification system, and Firebase Firestore integration for saving data into a single JavaScript file that runs after DOM content is fully loaded.
+Add user authentication to my web app using Firebase Authentication. I need login, signup, and logout functionality. Include real-time user state management using onAuthStateChanged, and make sure the UI updates based on whether the user is logged in or not.
+Enhance the produce listing form by adding fields for category and price. Make sure all required fields are validated before submission. Ensure that only authenticated users can create listings, and update the listing display to include the category and price for each item.
+Implement a marketplace view that displays all listings in a grid layout. Add search functionality with real-time filtering based on the product name. Include dropdown filters for category and location, and ensure the listing cards display all relevant details clearly.
+Add a messaging system so users can communicate about listings. Each listing should have a message button that opens a modal for chatting. Enable real-time loading and sending of messages, and style the chat to differentiate between sent and received messages. Only logged-in users should be able to send messages.
+Improve the UI across the web app. Add a modal management system for components like messaging and login. Ensure the design is responsive across devices. Add loading indicators where necessary, handle errors gracefully, and improve the notification system for better user feedback.
+
+
+

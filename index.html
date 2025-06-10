@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MwangazaFarm - AI-powered Produce Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><i class="fas fa-seedling"></i> MwangazaFarm</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="auth-links">
+                    <a href="#" id="loginBtn" class="btn btn-secondary">Login</a>
+                    <a href="#" id="signupBtn" class="btn">Sign Up</a>
+                </li> 
+            </ul>
+            <button id="themeToggleBtn" class="theme-toggle" aria-label="Toggle Dark Mode" type="button">
+            <i id="themeIcon" class="fas fa-moon"></i>
+            <span id="themeLabel">Change Theme</span>
+            </button>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>AI-powered produce marketplace bridging Kenyan farms and cities</h1>
+                <p>Connect with urban consumers, get fair prices for your produce, and grow your farming business with smart technology.</p>
+                <a href="#listing-form" class="btn">Start Listing <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About MwangazaFarm</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>MwangazaFarm is an innovative platform connecting Kenyan farmers directly with urban consumers. Our mission is to empower farmers and provide fresh, quality produce to consumers while eliminating unnecessary middlemen.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Direct Connection</h3>
+                            <p>Connect directly with farmers and buyers, eliminating middlemen and ensuring fair prices.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI-Powered</h3>
+                            <p>Our smart technology helps create professional listings and matches buyers with the right produce.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Sustainable</h3>
+                            <p>Supporting sustainable farming practices and reducing food waste through direct connections.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Why MwangazaFarm?</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI-Powered Listings</h3>
+                    <p>Our technology creates professional product descriptions to highlight your produce quality.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Direct Market Access</h3>
+                    <p>Connect directly with urban consumers and eliminate costly middlemen.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Simple to Use</h3>
+                    <p>Easy platform designed for farmers of all technical backgrounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketplace" class="marketplace">
+            <h2>Browse Produce</h2>
+            <div class="marketplace-controls">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search produce...">
+                        <button id="searchButton" class="btn">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div class="filters">
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="grains">Grains</option>
+                            <option value="legumes">Legumes</option>
+                        </select>
+                        <select id="locationFilter">
+                            <option value="">All Locations</option>
+                            <option value="nairobi">Nairobi</option>
+                            <option value="nakuru">Nakuru</option>
+                            <option value="kisumu">Kisumu</option>
+                            <option value="machakos">Machakos</option>
+                        </select>
+                        <select id="priceFilter">
+                            <option value="">Price Range</option>
+                            <option value="0-50">KES 0 - 50/kg</option>
+                            <option value="51-100">KES 51 - 100/kg</option>
+                            <option value="101-200">KES 101 - 200/kg</option>
+                            <option value="201+">KES 201+/kg</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="listingsGrid" class="listings-grid">
+                <!-- Listings will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Success Stories</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MwangazaFarm helped me sell my tomato harvest at 30% higher prices by connecting me directly with restaurants in Nairobi."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>John Mwangi</h4>
+                        <p>Small-scale farmer, Nyeri</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI listing tool made my produce stand out. I've gained regular customers who now order from me every week!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Grace Ochieng</h4>
+                        <p>Medium-scale farmer, Kisumu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@mwangazafarm.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+254 700 678790</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="listing-form" class="listing-form">
+            <h2>List Your Produce</h2>
+            <form id="produceForm">
+                <div class="form-group">
+                    <label for="produce">Produce Name</label>
+                    <input type="text" id="produce" name="produce" placeholder="e.g., Tomatoes, Maize, Potatoes" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="grains">Grains</option>
+                        <option value="legumes">Legumes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity (kg)</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price per kg (KES)</label>
+                    <input type="number" id="price" name="price" min="1" placeholder="e.g., 100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Nakuru, Kisumu, Machakos" required>
+                </div>
+
+                <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-magic"></i> Generate Smart Listing
+                </button>
+            </form>
+        </section>
+
+        <section id="listing-result" class="listing-result hidden">
+            <h2>Your Smart Listing</h2>
+            <div class="listing-card">
+                <div class="listing-header">
+                    <h3 id="listing-title">Product Name</h3>
+                    <span class="listing-badge">New Listing</span>
+                </div>
+                <div class="listing-body">
+                    <div class="listing-price" id="listing-price">KES 0/kg</div>
+                    <p id="listing-description">Your product description will appear here after generation.</p>
+                    <div class="listing-details">
+                        <div class="listing-detail">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span id="listing-quantity">0 kg</span>
+                        </div>
+                        <div class="listing-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="listing-location">Location</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing-actions">
+                    <button class="btn btn-secondary" id="edit-listing">
+                        <i class="fas fa-edit"></i> Edit Listing
+                    </button>
+                    <button class="btn" id="save-listing">
+                        <i class="fas fa-save"></i> Save Listing
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth Modals -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 style="text-align: center;">Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 style="text-align: center;">Sign Up</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userType">I am a:</label>
+                        <select id="userType" required>
+                            <option value="farmer">Farmer</option>
+                            <option value="buyer">Buyer</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Sign Up</button>
+                </form>
+                <p style="text-align: center;">Already have an account?<a href="" style="color:green">Log In</a></p>
+            </div>
+        </div>
+
+        <!-- Messaging Modal -->
+        <div id="messageModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Messages</h2>
+                <div class="messages-container">
+                    <div class="messages-list">
+                        <!-- Messages will be listed here -->
+                    </div>
+                    <div class="message-compose">
+                        <textarea id="messageText" placeholder="Type your message..."></textarea>
+                        <button id="sendMessage" class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2><i class="fas fa-seedling"></i> MwangazaFarm</h2>
+                <p class="tagline">MwangazaFarm – Harvest the Future.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f666169604f62786e61686e696e7d62216c6021646a">[email&#160;protected]</a></p>
+                <p><i class="fas fa-phone"></i> +254 700 678790</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MwangazaFarm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Cloudflare email protection -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    
+    <!-- Main application script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
