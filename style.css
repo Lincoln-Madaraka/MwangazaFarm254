@@ -1193,3 +1193,30 @@ footer {
         width: 100%;
     }
 }
+/* Animation classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Stagger effect for child elements */
+.stagger-container > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.stagger-container.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-container.visible > *:nth-child(2) { transition-delay: 0.3s; }
+.stagger-container.visible > *:nth-child(3) { transition-delay: 0.5s; }
