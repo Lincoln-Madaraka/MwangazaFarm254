@@ -7,7 +7,19 @@ const firebaseConfig = {
     messagingSenderId: "###",
     appId: "####"
 };
+const fadeIns = document.querySelectorAll('.fade-in-up, .stagger-container');
 
+  const revealOnScroll = () => {
+    fadeIns.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
 // Initialize Firebase with error handling
 let db;
 let auth;
