@@ -1205,6 +1205,27 @@ footer {
   transform: translateY(0);
 }
 
+.mobile-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  #themeToggleBtn {
+    display: none; /* hide nav bar button on mobile */
+  }
+
+  .mobile-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
 /* Optional: Stagger effect for child elements */
 .stagger-container > * {
   opacity: 0;

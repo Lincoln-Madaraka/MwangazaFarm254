@@ -820,38 +820,64 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const toggleBtn = document.getElementById('themeToggleBtn');
-const themeIcon = document.getElementById('themeIcon');
-const themeLabel = document.getElementById('themeLabel');
+ const toggleBtns = [
+    document.getElementById('themeToggleBtn'),       // Desktop button
+    document.getElementById('mobileThemeToggle')     // Mobile button
+  ];
 
-function applyTheme(isDark) {
-  if (isDark) {
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-    themeIcon.style.color = 'white';
-    themeLabel.textContent = 'Light Mode';
-    themeLabel.style.color = 'lightgray';
-    toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
-  } else {
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
-    themeIcon.style.color = 'white';
-    themeLabel.textContent = 'Dark Mode';
-    themeLabel.style.color = 'lightgray';
-    toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+  const icons = [
+    document.getElementById('themeIcon'),
+    document.getElementById('mobileThemeIcon')
+  ];
+
+  const labels = [
+    document.getElementById('themeLabel'),
+    document.getElementById('mobileThemeLabel')
+  ];
+
+  // Load saved theme from local storage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
   }
-}
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-theme');
-} else {
-  document.body.classList.remove('dark-theme');
-}
-applyTheme(document.body.classList.contains('dark-theme'));
 
-toggleBtn.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark-theme');
-  applyTheme(isDark);
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+  // Function to update theme icons, labels and aria attributes
+  function applyTheme(isDark) {
+    icons.forEach(icon => {
+      if (icon) {
+        icon.classList.remove(isDark ? 'fa-moon' : 'fa-sun');
+        icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+        icon.style.color = 'white';
+      }
+    });
+
+    labels.forEach(label => {
+      if (label) {
+        label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        label.style.color = 'lightgray';
+      }
+    });
+
+    toggleBtns.forEach(btn => {
+      if (btn) {
+        btn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      }
+    });
+  }
+
+  // Apply theme initially
+  applyTheme(document.body.classList.contains('dark-theme'));
+
+  // Add click event to both buttons
+  toggleBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        applyTheme(isDark);
+      });
+    }
+  });
 
 
 
