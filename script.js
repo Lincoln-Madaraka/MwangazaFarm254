@@ -839,7 +839,12 @@ function applyTheme(isDark) {
     toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
   }
 }
-
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+} else {
+  document.body.classList.remove('dark-theme');
+}
 applyTheme(document.body.classList.contains('dark-theme'));
 
 toggleBtn.addEventListener('click', () => {
