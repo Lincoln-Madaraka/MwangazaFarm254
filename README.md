@@ -74,21 +74,21 @@
 3. Run the development server;
 Open the app in your browser at http://localhost:3000 or open index.html directly if no server is used.
 
-🌍 Deployment
+### 🌍 Deployment
 MwangazaFarm254 is deployed on Vercel for blazing-fast, scalable hosting.
 Access the live demo here:
 https://mwangazafarm254.vercel.app/
 
-📂 Project Structure
+### 📂 Project Structure
 MwangazaFarm254/
 ├── public/
 │   └── mwangazafarm.png         # App screenshot and static assets
 ├── index.html                   # Main app page
 ├── styles.css     
 └── script.js
-🤝 Contributing
+### 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check issues page or submit a pull request.
 
-👨‍💻 Author
+### 👨‍💻 Author
 Lincoln Madaraka
 [![GitHub](https://img.shields.io/badge/-@Lincoln--Madaraka-181717?logo=github)](https://github.com/Lincoln-Madaraka)
