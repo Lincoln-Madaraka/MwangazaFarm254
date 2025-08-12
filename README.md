@@ -24,10 +24,10 @@
   Secure Firestore database for saving listings & Authentication for user accounts
 
 - 📱 **Responsive Design**  
-  Mobile-first layout including a collapsible menu, smooth scrolling, and user notifications
+  Mobile-first layout including a collapsible menu, smooth scrolling and user notifications
 
 - 🔎 **Marketplace with Search & Filters**  
-  Easy navigation to find produce by category, location, price range, and more
+  Easy navigation to find produce by category, location, price range and more
 
 - 💬 **In-App Messaging System**  
   Connect farmers and consumers directly within the platform to discuss listings
